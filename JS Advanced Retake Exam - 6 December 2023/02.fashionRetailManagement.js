@@ -25,8 +25,7 @@ class FashionRetailInventory {
             throw new Error(`The product ${productName}, size ${size} is not in the inventory`);
         } else {
             this.productStock = this.productStock.filter(product => product.productName !== productName && product.size !== size);
-            // return `The product ${productName}, size ${size} was successfully removed from the inventory`;
-            console.log(this.productStock); 
+            return `The product ${productName}, size ${size} was successfully removed from the inventory`;
         }
     }
 
@@ -52,11 +51,6 @@ class FashionRetailInventory {
     }
 
 }
-const storeHouse = new FashionRetailInventory("East", "Milano");
-console.log(storeHouse.addProduct("Shirt", "M", 10, 25.0));
-console.log(storeHouse.addProduct("T-Shirt", "M", 10, 25.0));
-console.log(storeHouse.sendProduct("T-Shirt", "M"));
-console.log(storeHouse.sendProduct("Sweather", "M"));
 
 
 
